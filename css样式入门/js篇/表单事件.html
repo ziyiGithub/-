@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form id="a111" action="bnaidu" onsubmit="tijiao">
+    
+        <input type="text" id="username" name="user">
+    <button id="id11">重置按钮</button>
+
+    <button>提交</button>
+    
+
+</form>
+
+<script>
+
+     var user = document.getElementById("username");
+
+    user.onchange = function(e){
+        console.log(e.target.value);
+    }
+    user.addEventListener('select', function(e){
+        console.log(e.type);
+    },false)
+
+    var cz = document.getElementById("id11");
+    var a111 = document.getElementById("a111");
+    cz.onclick = function(e){
+        a111.reset();
+    }
+
+
+function tijiao(){
+    console.log("提交表单");
+}
+
+
+
+</script>
+
+</body>
+</html>

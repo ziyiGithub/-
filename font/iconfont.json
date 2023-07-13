@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13607539",
+      "name": "铂爵旅拍-别墅",
+      "font_class": "bojuelvpai-bieshu",
+      "unicode": "e879",
+      "unicode_decimal": 59513
+    }
+  ]
+}

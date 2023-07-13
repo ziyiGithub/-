@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    width: 300px;
+
+    background-color: blue;
+
+}
+div::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.a123{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    float: left;
+    border: 5px solid darkcyan;
+}
+.a124{
+    width: 70px;
+    height: 70px;
+    background-color: darkblue;
+    border: 5px solid darkcyan;
+
+}
+    </style>
+
+  
+
+</head>
+<body>
+
+<div>
+    <div class="a123"></div>
+    <div class="a123"></div>
+    <div class="a123"></div>
+    
+</div>
+<div class="a124"></div>
+    
+</div>
+</body>
+</html>

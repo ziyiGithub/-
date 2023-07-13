@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color: lawngreen;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="div">
+
+        <button id="sb">单机</button>
+        <button id="sb1">双击</button>
+    </div>
+
+    <div class="div1" id="div1">
+
+        <div class="div2"></div>
+    </div>
+
+    <script>
+
+        var btn1 = document.getElementById("sb");
+        btn1.onclick = function(){
+            console.log("click事件")
+        } 
+
+        var btn2 = document.getElementById("sb1");
+        btn2.ondblclick = function(){
+            console.log("双击事件")
+        }
+
+        btn2.onmousedown = function(){
+            console.log("按下鼠标触发")
+        }
+
+        btn2.onmouseup = function(){
+            console.log("释放按下的鼠标触发")
+        }
+        
+        var bt1 = document.getElementsByClassName("div1")[0];
+        console.log(document.getElementsByClassName("div1"));
+        // bt1.onmousemove = function(){
+        //     console.log("连续移动触发")
+        // }
+
+        // bt1.onmouseenter = function(){
+        //     console.log("进入")
+        // }
+        // bt1.onmouseleave = function(){
+        //     console.log("退出")
+        // }
+
+        bt1.onmouseover = function(){
+            console.log("进入")
+        }
+        bt1.onmouseout = function(){
+            console.log("退出")
+        }
+
+    btn2.onwheel = function(){
+        console.log("滚轮触发")
+    }
+
+    </script>
+</body>
+</html>

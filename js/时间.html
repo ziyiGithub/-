@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+
+<body>
+    
+    <div id="div">
+        <button id="bit">按钮</button>
+    </div>
+
+    <div id="div1">
+        <button id="dl">登录</button>
+    </div>
+    
+    <script>
+
+        var a = document.getElementById("bit");
+        a.onclick = function(){
+            alert("点击onclick事件1");
+        }
+        a.onclick = function(){
+            alert("点击onclick事件2")
+        }
+
+
+
+        var b = document.getElementById("dl");
+        b.addEventListener("click",dem1);
+        b.addEventListener("click",dem2);
+        b.addEventListener("click",dem3);
+        // b.removeEventListener("click",dem1);
+
+        function dem1(){
+            alert("点击dom2事件1")
+        }
+        function dem2(){
+            alert("点击dom2事件2")
+        }
+        function dem3(){
+            alert("点击dom2事件3")
+        }
+    </script>
+</body>
+</html>

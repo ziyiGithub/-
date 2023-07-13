@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <div>图片加载中
+
+    </div>
+    <script>
+        function loadImageAsync(url){
+            const pronise = new Promise(function(resolve, reject){
+
+                const image = new Image();
+                image.src = url;
+                image.onload = function(){
+                    resolve(image);
+                };
+
+                image.onerror = function(){
+                    reject(new Error('Could') + url);
+                    
+                }
+            });
+
+            return pronise;
+        }
+
+        loadImageAsync("http://iwenwiki.com/api/vue-data/vue-data-1.png")
+        .then(function(data){
+            console.log(data);
+            $("div").append(data)
+        }, function(error){
+            $("div").html(error)
+        })
+    </script>
+    
+</body>
+</html>
